@@ -101,12 +101,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)..\DxLib;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)..\DxLib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)..\..\DxLib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\..\DxLib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)..\DxLib;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)..\DxLib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)..\..\DxLib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\..\DxLib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

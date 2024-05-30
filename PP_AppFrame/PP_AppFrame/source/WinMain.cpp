@@ -1,4 +1,5 @@
-#include "AppFrame.h"
+#include "Application/ApplicationBase.h"
+//#include "AppFrame.h"
 //WinMain : ƒvƒƒOƒ‰ƒ€‹N“®ŠÖ”
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {

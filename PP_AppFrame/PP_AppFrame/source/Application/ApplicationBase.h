@@ -1,7 +1,7 @@
 #pragma once
 #include <stdio.h>
 #include <time.h>
-#include "dxlib.h"
+#include "DxLib.h"
 #include "EffekseerForDXLib.h"
 #include "../Mode/ModeServer.h"
 class ApplicationBase

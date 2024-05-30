@@ -1,6 +1,8 @@
 #pragma once
 #pragma comment(lib,"AppFrame.lib")
-#include "EffekseerForDXLib.h"
+
+//#include <EffekseerForDXLib.h>
+//#include <DxLib.h>
 #include "Application/ApplicationBase.h"
 #include "CFile/CFile.h"
 #include "Component/Component.h"
