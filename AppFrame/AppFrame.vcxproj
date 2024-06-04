@@ -18,41 +18,11 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="source\Application\ApplicationBase.cpp" />
-    <ClCompile Include="source\CFile\CFile.cpp" />
-    <ClCompile Include="source\Component\Component.cpp" />
-    <ClCompile Include="source\Easing\Easing.cpp" />
-    <ClCompile Include="source\Effect\Effect.cpp" />
-    <ClCompile Include="source\GamePad\XPad\GameXPad.cpp" />
-    <ClCompile Include="source\Matrix3D\Matrix3D.cpp" />
-    <ClCompile Include="source\Mode\ModeBase.cpp" />
-    <ClCompile Include="source\Mode\ModeServer.cpp" />
-    <ClCompile Include="source\MyMath\MyMath.cpp" />
-    <ClCompile Include="source\Object\ObjectBase.cpp" />
-    <ClCompile Include="source\Vector3D\Vector3D.cpp" />
-    <ClCompile Include="source\WinMain.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="source\AppFrame.h" />
-    <ClInclude Include="source\Application\ApplicationBase.h" />
-    <ClInclude Include="source\CFile\CFile.h" />
-    <ClInclude Include="source\Component\Component.h" />
-    <ClInclude Include="source\Easing\Easing.h" />
-    <ClInclude Include="source\Effect\Effect.h" />
-    <ClInclude Include="source\GamePad\XPad\GameXPad.h" />
-    <ClInclude Include="source\Matrix3D\Matrix3D.h" />
-    <ClInclude Include="source\Mode\ModeBase.h" />
-    <ClInclude Include="source\Mode\ModeServer.h" />
-    <ClInclude Include="source\MyMath\MyMath.h" />
-    <ClInclude Include="source\Object\ObjectBase.h" />
-    <ClInclude Include="source\Vector3D\Vector3D.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>17.0</VCProjectVersion>
+    <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{0910e88c-54c3-4d02-a588-a06149720b31}</ProjectGuid>
-    <RootNamespace>PPAppFrame</RootNamespace>
+    <ProjectGuid>{2649d2cb-85d2-4b89-a222-109ede46ff05}</ProjectGuid>
+    <RootNamespace>AppFrame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -67,7 +37,7 @@
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
@@ -80,7 +50,7 @@
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -101,12 +71,28 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)..\..\DxLib;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)..\..\DxLib;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\DxLib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\DxLib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\DxLib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\DxLib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)..\..\DxLib;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)..\..\DxLib;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)..\DxLib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\DxLib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\DxLib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\DxLib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -114,6 +100,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -129,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -144,6 +132,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -159,6 +148,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -168,6 +158,37 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Application\ApplicationBase.cpp" />
+    <ClCompile Include="source\Application\WinMain.cpp" />
+    <ClCompile Include="source\CFile\CFile.cpp" />
+    <ClCompile Include="source\Component\Component.cpp" />
+    <ClCompile Include="source\Easing\Easing.cpp" />
+    <ClCompile Include="source\Effect\Effect.cpp" />
+    <ClCompile Include="source\GamePad\XPad\GameXPad.cpp" />
+    <ClCompile Include="source\Matrix3D\Matrix3D.cpp" />
+    <ClCompile Include="source\Mode\ModeBase.cpp" />
+    <ClCompile Include="source\Mode\ModeServer.cpp" />
+    <ClCompile Include="source\MyMath\MyMath.cpp" />
+    <ClCompile Include="source\Object\ObjectBase.cpp" />
+    <ClCompile Include="source\Vector3D\Vector3D.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\AppFrame.h" />
+    <ClInclude Include="source\Application\ApplicationBase.h" />
+    <ClInclude Include="source\Application\UtilMacro.h" />
+    <ClInclude Include="source\CFile\CFile.h" />
+    <ClInclude Include="source\Component\Component.h" />
+    <ClInclude Include="source\Easing\Easing.h" />
+    <ClInclude Include="source\Effect\Effect.h" />
+    <ClInclude Include="source\GamePad\XPad\GameXPad.h" />
+    <ClInclude Include="source\Matrix3D\Matrix3D.h" />
+    <ClInclude Include="source\Mode\ModeBase.h" />
+    <ClInclude Include="source\Mode\ModeServer.h" />
+    <ClInclude Include="source\MyMath\MyMath.h" />
+    <ClInclude Include="source\Object\ObjectBase.h" />
+    <ClInclude Include="source\Vector3D\Vector3D.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

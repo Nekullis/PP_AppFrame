@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Application">
+      <UniqueIdentifier>{4ca63305-d083-453b-88a9-706f0a1ac180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ModeServer">
+      <UniqueIdentifier>{f65d1d8e-b785-4c0b-a849-085fd92b4b60}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Application\ApplicationBase.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Mode\ModeBase.cpp">
+      <Filter>ModeServer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Mode\ModeServer.cpp">
+      <Filter>ModeServer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Application\WinMain.cpp" />
+    <ClCompile Include="source\CFile\CFile.cpp" />
+    <ClCompile Include="source\Component\Component.cpp" />
+    <ClCompile Include="source\Easing\Easing.cpp" />
+    <ClCompile Include="source\Effect\Effect.cpp" />
+    <ClCompile Include="source\GamePad\XPad\GameXPad.cpp" />
+    <ClCompile Include="source\Matrix3D\Matrix3D.cpp" />
+    <ClCompile Include="source\MyMath\MyMath.cpp" />
+    <ClCompile Include="source\Object\ObjectBase.cpp" />
+    <ClCompile Include="source\Vector3D\Vector3D.cpp" />
+    <ClCompile Include="source\Application\WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Application\ApplicationBase.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Application\UtilMacro.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="source\AppFrame.h" />
+    <ClInclude Include="source\Mode\ModeBase.h">
+      <Filter>ModeServer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Mode\ModeServer.h">
+      <Filter>ModeServer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\CFile\CFile.h" />
+    <ClInclude Include="source\Component\Component.h" />
+    <ClInclude Include="source\Easing\Easing.h" />
+    <ClInclude Include="source\Effect\Effect.h" />
+    <ClInclude Include="source\GamePad\XPad\GameXPad.h" />
+    <ClInclude Include="source\Matrix3D\Matrix3D.h" />
+    <ClInclude Include="source\MyMath\MyMath.h" />
+    <ClInclude Include="source\Object\ObjectBase.h" />
+    <ClInclude Include="source\Vector3D\Vector3D.h" />
+  </ItemGroup>
+</Project>
