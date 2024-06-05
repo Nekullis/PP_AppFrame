@@ -26,9 +26,9 @@
     <ClCompile Include="source\GamePad\XPad\GameXPad.cpp" />
     <ClCompile Include="source\Matrix3D\Matrix3D.cpp" />
     <ClCompile Include="source\MyMath\MyMath.cpp" />
-    <ClCompile Include="source\Object\ObjectBase.cpp" />
     <ClCompile Include="source\Vector3D\Vector3D.cpp" />
     <ClCompile Include="source\Application\WinMain.cpp" />
+    <ClCompile Include="source\Object\ObjectBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Application\ApplicationBase.h">
@@ -51,7 +51,7 @@
     <ClInclude Include="source\GamePad\XPad\GameXPad.h" />
     <ClInclude Include="source\Matrix3D\Matrix3D.h" />
     <ClInclude Include="source\MyMath\MyMath.h" />
-    <ClInclude Include="source\Object\ObjectBase.h" />
     <ClInclude Include="source\Vector3D\Vector3D.h" />
+    <ClInclude Include="source\Object\ObjectBase.h" />
   </ItemGroup>
 </Project>

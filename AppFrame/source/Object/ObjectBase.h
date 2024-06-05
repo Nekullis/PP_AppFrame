@@ -15,7 +15,7 @@ public:
 		PAUSE,
 		DEAD
 	};
-	ObjectBase();
+	ObjectBase(class ModeBase* game);
 	virtual ~ObjectBase();
 	virtual void Initialize();
 	virtual void Process();
@@ -27,19 +27,20 @@ public:
 	void RemoveComponent(class Component* component);
 	//ゲッター
 	Vector3D GetPos() { return mPos; }
-	float GetRotation() const { return mRotation; }
+	Vector3D GetRotation() const { return mRotation; }
 	float GetScale() const { return mScale; }
 	State GetState() const { return mState; }
+	class ModeGame* GetGame() { return mGame; }
 	//セッター
 	void SetPos(const Vector3D& pos) { mPos = pos; }
-	void SetRotation(float rot) { mRotation = rot; }
+	void SetRotation(Vector3D rot) { mRotation = rot; }
 	void SetScale(float scale) { mScale = scale; }
 	void SetState(State state) { mState = state; }
 protected:
 	//位置
 	Vector3D mPos;
 	//角度
-	float mRotation;
+	Vector3D mRotation;
 	//スケール
 	float mScale;
 	//状態

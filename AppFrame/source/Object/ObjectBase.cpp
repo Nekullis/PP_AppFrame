@@ -1,12 +1,12 @@
 #include "ObjectBase.h"
 #include <algorithm>
 #include "../Component/Component.h"
-ObjectBase::ObjectBase()
+ObjectBase::ObjectBase(ModeBase* game)
 {
 	//位置
 	mPos = { 0 };
 	//角度
-	mRotation = 0;
+	mRotation = { 0 };
 	//スケール
 	mScale = 0;
 
@@ -34,6 +34,7 @@ void ObjectBase::Process()
 void ObjectBase::Render()
 {
 	
+	
 #if _DEBUG
 	Debug();
 #endif
@@ -59,3 +60,4 @@ void ObjectBase::RemoveComponent(Component* component)
 	//探したコンポーネントの消去
 	if (itr != mComponents.end()) { mComponents.erase(itr); }
 }
+
