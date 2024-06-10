@@ -44,9 +44,9 @@ bool GameXPad::Input()
 	return true;
 }
 
-bool GameXPad::IsInputStick(int i) 
+bool GameXPad::IsInputStick() 
 {
 	//アナログスティックが動かされているならtrue
-	if (_xInput.ThumbLX || _xInput.ThumbLY != 0) { return true; }
+	if (_xInput.ThumbLX != 0 || _xInput.ThumbLY != 0) { return true; }
 	return false;
 }
