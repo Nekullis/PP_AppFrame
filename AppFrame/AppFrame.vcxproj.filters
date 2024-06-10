@@ -7,6 +7,27 @@
     <Filter Include="ModeServer">
       <UniqueIdentifier>{f65d1d8e-b785-4c0b-a849-085fd92b4b60}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CFile">
+      <UniqueIdentifier>{0164aaab-83a8-4236-a7ab-5513cf5e59bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{15aa9526-ff1c-4576-8aa4-a71e6d469895}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Easing">
+      <UniqueIdentifier>{d623f759-020c-48e9-8aee-678184dbbeff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effect">
+      <UniqueIdentifier>{92044505-3d89-46fe-a511-82ede72c18ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GamePad">
+      <UniqueIdentifier>{1af7efe8-d299-45c4-93a0-24edcc218446}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{d69bbafc-f79c-4028-ba75-300b4bbc404c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{9609eb5f-34c2-49c8-b168-72b5ae833086}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Application\ApplicationBase.cpp">
@@ -19,16 +40,34 @@
       <Filter>ModeServer</Filter>
     </ClCompile>
     <ClCompile Include="source\Application\WinMain.cpp" />
-    <ClCompile Include="source\CFile\CFile.cpp" />
-    <ClCompile Include="source\Component\Component.cpp" />
-    <ClCompile Include="source\Easing\Easing.cpp" />
-    <ClCompile Include="source\Effect\Effect.cpp" />
-    <ClCompile Include="source\GamePad\XPad\GameXPad.cpp" />
-    <ClCompile Include="source\Matrix3D\Matrix3D.cpp" />
-    <ClCompile Include="source\MyMath\MyMath.cpp" />
-    <ClCompile Include="source\Vector3D\Vector3D.cpp" />
     <ClCompile Include="source\Application\WinMain.cpp" />
-    <ClCompile Include="source\Object\ObjectBase.cpp" />
+    <ClCompile Include="source\CFile\CFile.cpp">
+      <Filter>CFile</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Component\Component.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Easing\Easing.cpp">
+      <Filter>Easing</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Effect\Effect.cpp">
+      <Filter>Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GamePad\XPad\GameXPad.cpp">
+      <Filter>GamePad</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Matrix3D\Matrix3D.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\MyMath\MyMath.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Vector3D\Vector3D.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Object\ObjectBase.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Application\ApplicationBase.h">
@@ -44,14 +83,32 @@
     <ClInclude Include="source\Mode\ModeServer.h">
       <Filter>ModeServer</Filter>
     </ClInclude>
-    <ClInclude Include="source\CFile\CFile.h" />
-    <ClInclude Include="source\Component\Component.h" />
-    <ClInclude Include="source\Easing\Easing.h" />
-    <ClInclude Include="source\Effect\Effect.h" />
-    <ClInclude Include="source\GamePad\XPad\GameXPad.h" />
-    <ClInclude Include="source\Matrix3D\Matrix3D.h" />
-    <ClInclude Include="source\MyMath\MyMath.h" />
-    <ClInclude Include="source\Vector3D\Vector3D.h" />
-    <ClInclude Include="source\Object\ObjectBase.h" />
+    <ClInclude Include="source\CFile\CFile.h">
+      <Filter>CFile</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Component\Component.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Easing\Easing.h">
+      <Filter>Easing</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Effect\Effect.h">
+      <Filter>Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GamePad\XPad\GameXPad.h">
+      <Filter>GamePad</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Matrix3D\Matrix3D.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\MyMath\MyMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Vector3D\Vector3D.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Object\ObjectBase.h">
+      <Filter>Object</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
