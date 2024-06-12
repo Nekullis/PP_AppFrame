@@ -1,7 +1,9 @@
 #include "GameXPad.h"
 
+GameXPad* GameXPad::padInstance = nullptr;
 GameXPad::GameXPad()
 {
+	padInstance = this;
 	//‰Šú‰»
 	for (int i = 0; i < MAX_PAD_BUTTON; i++)
 	{

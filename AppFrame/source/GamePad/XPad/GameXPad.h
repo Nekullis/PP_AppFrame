@@ -28,10 +28,12 @@ class GameXPad
 public:
 	GameXPad();
 	~GameXPad();
+	static GameXPad* padInstance;
 	bool Input();
 	//入力されているか
 	bool IsInputStick();
 	//ゲッター
+	static GameXPad* GetInstance() { return padInstance; }
 	//ボタン
 	bool GetXKey(int index) { return _xInput.Buttons[index]; }
 	bool GetXTrg(int index) { return _xTrg[index]; }
