@@ -17,6 +17,8 @@ public:
 	static T RadToDeg(T rad) { return rad * 180.0 / PI; }
 	//”÷¬‚È’l‚Æ‚Ì”äŠr
 	static bool NearZero(double vol, double epsiron = 0.001);
+	//‹…–ÊÀ•WŒn‚©‚çƒfƒJƒ‹ƒgÀ•WŒn‚É•ÏŠ·‚·‚é
+	static class Vector3D ConvertToCartesian(class Vector3D angle, float radius);
 	//Å’Z‹——£Œn
 	//“_‚Æ’¼ü‚ÌÅ’Z‹——£
 	static float DisPointAndLine(class Vector3D& v1, class Vector3D& v2s, class Vector3D& v2e, class Vector3D& mp, double& t);

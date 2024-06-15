@@ -14,6 +14,16 @@ bool MyMath::NearZero(double vol, double epsiron)
 	else { return false; }
 }
 
+Vector3D MyMath::ConvertToCartesian(Vector3D angle, float radius)
+{
+	Vector3D temp;
+	//球面座標系をデカルト座標系に変換するために必要な要素は半径(radius),垂直角度(angleのx成分),水平角度(angleのy成分)
+	temp._x = radius * cos(angle._x) * sin(angle._y);
+	temp._y = radius * sin(angle._x);
+	temp._z = radius * cos(angle._x) * cos(angle._y);
+	return temp;
+}
+
 float MyMath::DisPointAndLine(Vector3D& v1, Vector3D& v2s, Vector3D& v2e, Vector3D& mp, double& t)
 {
 	//v1:点の位置

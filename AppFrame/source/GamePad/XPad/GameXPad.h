@@ -31,7 +31,8 @@ public:
 	static GameXPad* padInstance;
 	bool Input();
 	//入力されているか
-	bool IsInputStick();
+	bool IsInputStickLeft();
+	bool IsInputStickRight();
 	//ゲッター
 	static GameXPad* GetInstance() { return padInstance; }
 	//ボタン

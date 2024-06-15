@@ -46,9 +46,15 @@ bool GameXPad::Input()
 	return true;
 }
 
-bool GameXPad::IsInputStick() 
+bool GameXPad::IsInputStickLeft()
 {
-	//アナログスティックが動かされているならtrue
+	//左アナログスティックが動かされているならtrue
 	if (_xInput.ThumbLX != 0 || _xInput.ThumbLY != 0) { return true; }
+	return false;
+}
+bool GameXPad::IsInputStickRight()
+{
+	//右アナログスティックが動かされているならtrue
+	if(_xInput.ThumbRX != 0 || _xInput.ThumbRY != 0) { return true; }
 	return false;
 }
