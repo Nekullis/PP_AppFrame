@@ -11,7 +11,7 @@ public:
 	//Šp“x’PˆÊ‚Ì•ÏŠ·
 	//degree->rad
 	template<typename T>
-	static T DegToRad(T deg) { return deg * PI / 180.0; }
+	static T DegToRad(T deg) { return deg * PI / 180.0f; }
 	//rad->degree
 	template<typename T>
 	static T RadToDeg(T rad) { return rad * 180.0 / PI; }

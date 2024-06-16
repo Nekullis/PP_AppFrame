@@ -1,4 +1,5 @@
 #include "Vector3D.h"
+#include"../Matrix3D/Matrix3D.h"
 #include <math.h>
 // オペレータオーバーロード（クラス外）
 Vector3D operator+(const Vector3D& left, const Vector3D& right)
@@ -9,10 +10,6 @@ Vector3D operator-(const Vector3D& left, const Vector3D& right)
 {
 	return Vector3D(left) -= right;
 }
-Vector3D operator*(const Vector3D& left, const Vector3D& right)
-{
-	return Vector3D(left) *= right;
-}
 Vector3D operator*(const Vector3D& left, const double right)
 {
 	return Vector3D(left) *= right;
@@ -21,9 +18,9 @@ Vector3D operator*(const double left, const Vector3D& right)
 {
 	return Vector3D(right) *= left;
 }
-Vector3D operator/(const Vector3D& left, const Vector3D& right)
+Vector3D operator*(const Vector3D& left, const Matrix3D& right)
 {
-	return Vector3D(left) /= right;
+	return Vector3D::Transform(left,right);
 }
 Vector3D operator/(const Vector3D& left, const double right)
 {
@@ -36,50 +33,31 @@ Vector3D operator/(const double left, const Vector3D& right)
 
 Vector3D	Vector3D::operator+=(const Vector3D& right)
 {
-	Vector3D tmp;
-	tmp._x = _x + right._x;
-	tmp._y = _y + right._y;
-	tmp._z = _z + right._z;
-	return tmp;
+	_x = _x + right._x;
+	_y = _y + right._y;
+	_z = _z + right._z;
+	return (*this);
 }
 Vector3D	Vector3D::operator-=(const Vector3D& right)
 {
-	Vector3D tmp;
-	tmp._x = _x - right._x;
-	tmp._y = _y - right._y;
-	tmp._z = _z - right._z;
-	return tmp;
+	_x = _x - right._x;
+	_y = _y - right._y;
+	_z = _z - right._z;
+	return (*this);
 }
-Vector3D	Vector3D::operator*=(const Vector3D& right)
+Vector3D	Vector3D::operator*=(const double right) 
 {
-	Vector3D tmp;
-	tmp._x = _x * right._x;
-	tmp._y = _y * right._y;
-	tmp._z = _z * right._z;
-	return tmp;
-}
-Vector3D	Vector3D::operator*=(const double right) {
-	Vector3D tmp;
-	tmp._x = _x * right;
-	tmp._y = _y * right;
-	tmp._z = _z * right;
-	return tmp;
-}
-Vector3D	Vector3D::operator/=(const Vector3D& right)
-{
-	Vector3D tmp;
-	tmp._x = _x / right._x;
-	tmp._y = _y / right._y;
-	tmp._z = _z / right._z;
-	return tmp;
+	_x = _x * right;
+	_y = _y * right;
+	_z = _z * right;
+	return (*this);
 }
 Vector3D	Vector3D::operator/=(const double right)
 {
-	Vector3D tmp;
-	tmp._x = _x / right;
-	tmp._y = _y / right;
-	tmp._z = _z / right;
-	return tmp;
+	_x = _x / right;
+	_y = _y / right;
+	_z = _z / right;
+	return (*this);
 }
 bool Vector3D::operator==(const Vector3D& right)
 {
@@ -173,5 +151,14 @@ Vector3D Vector3D::Normalize(Vector3D& in)
 Vector3D Vector3D::Normalize()
 {
 	return Normalize(*this);
+}
+
+Vector3D Vector3D::Transform(const Vector3D& in, const Matrix3D& matrix)
+{
+	Vector3D temp;
+	temp._x = in._x * matrix._m[0][0] + in._y * matrix._m[1][0] + in._z * matrix._m[2][0] + matrix._m[3][0];
+	temp._y = in._x * matrix._m[0][1] + in._y * matrix._m[1][1] + in._z * matrix._m[2][1] + matrix._m[3][1];
+	temp._z = in._x * matrix._m[0][2] + in._y * matrix._m[1][2] + in._z * matrix._m[2][2] + matrix._m[3][2];
+	return temp;
 }
 

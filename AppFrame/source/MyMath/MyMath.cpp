@@ -10,6 +10,7 @@ MyMath::~MyMath()
 
 bool MyMath::NearZero(double vol, double epsiron)
 {
+	//’l‚Ìâ‘Î’l‚ª0‚É‹ß‚¢w’è”‚æ‚è¬‚³‚¢‚Ì‚È‚çtrue
 	if (fabs(vol) <= epsiron) { return true; }
 	else { return false; }
 }

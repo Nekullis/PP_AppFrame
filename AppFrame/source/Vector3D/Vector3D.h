@@ -11,9 +11,7 @@ public:
 	// オペレータオーバーロード（クラス内）
 	Vector3D	operator+=(const Vector3D& right);
 	Vector3D	operator-=(const Vector3D& right);
-	Vector3D	operator*=(const Vector3D& right);
 	Vector3D	operator*=(const double right);
-	Vector3D	operator/=(const Vector3D& right);
 	Vector3D	operator/=(const double right);
 	bool		operator==(const Vector3D& right);
 	bool		operator!=(const Vector3D& right);
@@ -43,6 +41,8 @@ public:
 	static Vector3D Normalize(Vector3D& in);
 	// 正規化
 	Vector3D		Normalize();
+	// ベクトルの変換
+	static Vector3D		Transform(const Vector3D& in,const class Matrix3D& matrix);
 
 public:
 	double	_x, _y, _z;
@@ -51,10 +51,9 @@ public:
 // オペレータオーバーロード（クラス外）
 Vector3D operator+(const Vector3D& left, const Vector3D& right);
 Vector3D operator-(const Vector3D& left, const Vector3D& right);
-Vector3D operator*(const Vector3D& left, const Vector3D& right);
 Vector3D operator*(const Vector3D& left, const double right);
 Vector3D operator*(const double left, const Vector3D& right);
-Vector3D operator/(const Vector3D& left, const Vector3D& right);
+Vector3D operator*(const Vector3D& left, const class Matrix3D& right);
 Vector3D operator/(const Vector3D& left, const double right);
 Vector3D operator/(const double left, const Vector3D& right);
 
