@@ -121,8 +121,8 @@ Vector3D	Vector3D::Cross(Vector3D& in1, Vector3D& in2)
 
 Vector3D Vector3D::Cross(Vector3D& in1)
 {
-	Vector3D temp = (*this);
-	return Cross(temp, in1);
+	//Vector3D temp = (*this);
+	return Cross((*this), in1);
 }
 
 double	Vector3D::Length(Vector3D& in)

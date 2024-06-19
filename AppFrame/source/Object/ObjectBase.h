@@ -26,10 +26,10 @@ public:
 	//コンポーネント削除
 	void RemoveComponent(class Component* component);
 	//ゲッター
-	Vector3D GetPos() { return mPos; }
-	Vector3D GetRotation() const { return mRotation; }
-	float GetScale() const { return mScale; }
-	State GetState() const { return mState; }
+	virtual Vector3D GetPos() { return mPos; }
+	virtual Vector3D GetRotation() const { return mRotation; }
+	virtual float GetScale() const { return mScale; }
+	virtual State GetState() const { return mState; }
 	class ModeGame* GetGame() { return mGame; }
 	//セッター
 	void SetPos(const Vector3D& pos) { mPos = pos; }

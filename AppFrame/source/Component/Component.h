@@ -10,6 +10,7 @@ public:
 	virtual void Update();
 	//ゲッター
 	int GetUpdateOwder() const { return mUpdateOwder; }
+	class ObjectBase* GetOwner() { return mOwner; }
 protected:
 	//所有オブジェクト
 	class ObjectBase* mOwner;
