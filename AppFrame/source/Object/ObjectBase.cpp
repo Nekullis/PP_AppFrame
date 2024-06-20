@@ -9,6 +9,7 @@ ObjectBase::ObjectBase(ModeBase* game)
 	mRotation = { 0 };
 	//ÉXÉPÅ[Éã
 	mScale = 0;
+	mIsTargetting = false;
 
 	Initialize();
 }

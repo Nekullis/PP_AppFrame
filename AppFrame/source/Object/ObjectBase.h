@@ -29,6 +29,7 @@ public:
 	virtual Vector3D GetPos() { return mPos; }
 	virtual Vector3D GetRotation() const { return mRotation; }
 	virtual float GetScale() const { return mScale; }
+	virtual bool GetIsTarget() { return mIsTargetting; }
 	virtual State GetState() const { return mState; }
 	class ModeGame* GetGame() { return mGame; }
 	//セッター
@@ -45,6 +46,8 @@ protected:
 	float mScale;
 	//状態
 	State mState;
+	//ターゲット可能か
+	bool mIsTargetting;
 	//コンポーネント
 	std::vector<class Component*> mComponents;
 	class ModeGame* mGame;
