@@ -123,6 +123,19 @@ Matrix3D& Matrix3D::operator=(const MATRIX& right)
 	return (*this);
 }
 
+MATRIX Matrix3D::dxl()
+{
+	MATRIX m;
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			m.m[i][j]=static_cast<float>(_m[i][j]);
+		}
+	}
+	return m;
+}
+
 Matrix3D Matrix3D::MScale(Matrix3D m, double d)
 {
 	Matrix3D temp;

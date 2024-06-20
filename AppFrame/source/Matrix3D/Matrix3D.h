@@ -16,6 +16,7 @@ public:
 	bool      operator!=(const Matrix3D& right);
 	//DXライブラリのMATRIXを使えるように
 	Matrix3D& operator= (const MATRIX& right);
+	MATRIX  dxl();
 	//matrix計算処理
 	//スケーリング
 	Matrix3D  MScale(Matrix3D m, double d);
