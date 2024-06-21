@@ -171,6 +171,7 @@
     <ClCompile Include="source\Mode\ModeServer.cpp" />
     <ClCompile Include="source\MyMath\MyMath.cpp" />
     <ClCompile Include="source\Object\ObjectBase.cpp" />
+    <ClCompile Include="source\ResourceManager\ResourceManager.cpp" />
     <ClCompile Include="source\Vector3D\Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +188,7 @@
     <ClInclude Include="source\Mode\ModeServer.h" />
     <ClInclude Include="source\MyMath\MyMath.h" />
     <ClInclude Include="source\Object\ObjectBase.h" />
+    <ClInclude Include="source\ResourceManager\ResourceManager.h" />
     <ClInclude Include="source\Vector3D\Vector3D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

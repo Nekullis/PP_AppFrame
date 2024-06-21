@@ -28,6 +28,9 @@
     <Filter Include="Object">
       <UniqueIdentifier>{9609eb5f-34c2-49c8-b168-72b5ae833086}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ResourseManager">
+      <UniqueIdentifier>{38d73198-9b4f-453b-a88b-9001f286b19b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Application\ApplicationBase.cpp">
@@ -67,6 +70,9 @@
     </ClCompile>
     <ClCompile Include="source\Object\ObjectBase.cpp">
       <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ResourceManager\ResourceManager.cpp">
+      <Filter>ResourseManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +115,9 @@
     </ClInclude>
     <ClInclude Include="source\Object\ObjectBase.h">
       <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ResourceManager\ResourceManager.h">
+      <Filter>ResourseManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
