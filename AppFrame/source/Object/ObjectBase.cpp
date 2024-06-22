@@ -10,16 +10,9 @@ ObjectBase::ObjectBase(ModeBase* game)
 	//ÉXÉPÅ[Éã
 	mScale = 0;
 	mIsTargetting = false;
-
-	Initialize();
 }
 
 ObjectBase::~ObjectBase()
-{
-
-}
-
-void ObjectBase::Initialize()
 {
 
 }

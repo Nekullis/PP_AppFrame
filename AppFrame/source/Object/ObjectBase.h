@@ -17,7 +17,6 @@ public:
 	};
 	ObjectBase(class ModeBase* game);
 	virtual ~ObjectBase();
-	virtual void Initialize();
 	virtual void Process();
 	virtual void Render();
 	virtual void Debug();
