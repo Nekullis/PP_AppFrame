@@ -159,6 +159,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Sound\SoundServer\SoundServer.cpp" />
+    <ClCompile Include="source\Sound\SoundItem\SoundItemBase.cpp" />
     <ClCompile Include="source\Application\ApplicationBase.cpp" />
     <ClCompile Include="source\Application\WinMain.cpp" />
     <ClCompile Include="source\CFile\CFile.cpp" />
@@ -175,6 +177,8 @@
     <ClCompile Include="source\Vector3D\Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Sound\SoundServer\SoundServer.h" />
+    <ClInclude Include="source\Sound\SoundItem\SoundItemBase.h" />
     <ClInclude Include="source\AppFrame.h" />
     <ClInclude Include="source\Application\ApplicationBase.h" />
     <ClInclude Include="source\Application\UtilMacro.h" />

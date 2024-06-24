@@ -74,6 +74,8 @@
     <ClCompile Include="source\ResourceManager\ResourceManager.cpp">
       <Filter>ResourseManager</Filter>
     </ClCompile>
+    <ClCompile Include="source\Sound\SoundItem\SoundItemBase.cpp" />
+    <ClCompile Include="source\Sound\SoundServer\SoundServer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Application\ApplicationBase.h">
@@ -119,5 +121,7 @@
     <ClInclude Include="source\ResourceManager\ResourceManager.h">
       <Filter>ResourseManager</Filter>
     </ClInclude>
+    <ClInclude Include="source\Sound\SoundItem\SoundItemBase.h" />
+    <ClInclude Include="source\Sound\SoundServer\SoundServer.h" />
   </ItemGroup>
 </Project>
