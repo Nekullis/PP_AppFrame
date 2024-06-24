@@ -4,7 +4,7 @@ Component::Component(ObjectBase* owner, int updateowder)
 {
 	mOwner = owner;
 	mUpdateOwder = updateowder;
-	mOwner->AddComponent(this);
+	//mOwner->AddComponent(this);
 }
 
 Component::~Component()
