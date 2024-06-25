@@ -19,8 +19,8 @@ public:
 	virtual bool AppWindowed() { return true; }
 //デバッグ時とリリース時で画面サイズを変更
 #if _DEBUG
-	int DispSizeW() { return 1280; }
-	int DispSizeH() { return 720; }
+	int DispSizeW() { return 1920; }
+	int DispSizeH() { return 1080; }
 #else
 	int DispSizeW() { return 1920; }
 	int DispSizeH() { return 1080; }

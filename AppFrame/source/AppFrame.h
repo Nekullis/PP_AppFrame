@@ -15,4 +15,6 @@
 #include "MyMath/MyMath.h"
 #include "Object/ObjectBase.h"
 #include "Vector3D/Vector3D.h"
+#include "Sound/SoundItem/SoundItemBase.h"
+#include "Sound/SoundServer/SoundServer.h"
 #include "ResourceManager/ResourceManager.h"
