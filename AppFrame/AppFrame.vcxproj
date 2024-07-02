@@ -86,7 +86,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)..\DxLib;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)..\DxLib;..\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)..\DxLib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Json\JsonUtility.cpp" />
     <ClCompile Include="source\Sound\SoundServer\SoundServer.cpp" />
     <ClCompile Include="source\Sound\SoundItem\SoundItemBase.cpp" />
     <ClCompile Include="source\Application\ApplicationBase.cpp" />
@@ -177,6 +178,7 @@
     <ClCompile Include="source\Vector3D\Vector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Json\JsonUtility.h" />
     <ClInclude Include="source\Sound\SoundServer\SoundServer.h" />
     <ClInclude Include="source\Sound\SoundItem\SoundItemBase.h" />
     <ClInclude Include="source\AppFrame.h" />
